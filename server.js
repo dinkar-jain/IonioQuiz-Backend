@@ -1,12 +1,14 @@
 import { usersModel, questionsModel } from "./models.js";
 import { getToken, IsAuth } from "./middlewares.js";
-import express from 'express';
 import Mongoose from "mongoose";
+import express from 'express';
 import bcrypt from "bcrypt";
 import dotenv from "dotenv";
+import cors from 'cors';
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 dotenv.config();
 
